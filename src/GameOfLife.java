@@ -21,14 +21,14 @@ public class GameOfLife
                  else
                     System.out.print("*");
                  }
-            System.out.println("");
+            System.out.println();
             }
-            System.out.println("");
+           // System.out.println(");
             kolejnaGeneracja(plansza, szerokosc, wysokosc);
 
         }
 
-            static void kolejnaGeneracja(int plansza[][],int szerokosc, int wysokosc) {
+            static void kolejnaGeneracja(int[][] plansza, int szerokosc, int wysokosc) {
 
                 int [][] symulacja = new int[szerokosc][wysokosc];
 
@@ -57,7 +57,6 @@ public class GameOfLife
                             System.out.print(".");
                         else
                             System.out.print("*");
-
                     }
                     System.out.println();
                 }
@@ -65,10 +64,9 @@ public class GameOfLife
                         int [][] seria = kolejnaGeneracjaInt(kolejnaGeneracjaInt(symulacja,szerokosc,wysokosc),szerokosc,wysokosc);
                     }
 
-
                 }
 
-        static int [][] kolejnaGeneracjaInt(int plansza[][],int szerokosc, int wysokosc) {
+        static int [][] kolejnaGeneracjaInt(int[][] plansza,int szerokosc, int wysokosc) {
 
             int [][] symulacja = new int[szerokosc][wysokosc];
 
@@ -91,6 +89,7 @@ public class GameOfLife
 
                     }
                 }
+
             System.out.println("Kolejna generacja");
             for (int i = 0; i < szerokosc; i++) {
                 for (int j = 0; j < wysokosc; j++) {
@@ -98,7 +97,6 @@ public class GameOfLife
                         System.out.print(".");
                     else
                         System.out.print("*");
-
                 }
                 System.out.println();
 
